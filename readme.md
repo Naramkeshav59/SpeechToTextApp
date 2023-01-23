@@ -29,7 +29,7 @@ This is a client-server architectural Web App made using flask micro framework w
 4. Install dependencies: </br> ```pip install -r requirements.txt ``` 
 5. Run the flask server </br> ```python main.py```
 6. The above will take some time for the first time while running reason being it should download the models. Later it won't take much time.
-7. Open <a href = 'http://127.0.0.1:8000/'> </a> for testing the app.
+7. Open this <a href = 'http://127.0.0.1:8000/'> link </a> for testing the app in your browser locally.
 8. Cheers!! that's all we have to do 🥂🥂...
 
 
