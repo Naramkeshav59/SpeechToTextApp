@@ -1,27 +1,37 @@
-Copyright (c) 2015, Kelly Davis 
-All rights reserved.
+This is a client-server architectural Web App made using flask micro framework webservice which is a Speech to Text web application.
+## Folder structure and details:
+```
+.
+├── __pycache__ (all the python cache will be here. Not important)
+│   └── model.cpython-39.pyc
+├── main.py (flask server to receive the audio chunk(request) and return the transcript(response)) 
+├── model.py (Models can be trained finetuned here. Includes a function for inferencing which is imported ro main.py) 
+├── readme.md (The present text file you are viewing right now)
+├── requirements.txt (python dependencies)
+├── static (folder for managing static files for the UI part)
+│   ├── css
+│   │   └── style.css (Basic styling is done here) 
+│   └── js (folder containing javascript files)
+│       ├── chunk.js (for creating chunks using vad.js and send them to the server using AJAX)
+│       ├── recorder.js (for recording the audio using browser's webrtc)
+│       └── vad.js      (vad is performed in real-time and we can make decisions based on vad using this)
+├── templates
+│   └── main.html       (to put together all JavaScript logic and interfacing them to the buttons etc.,).
+└── uploads
+    └── audio.wav       (temporary file in which the audio chunk from the client is stored and processed in the server for the transcript)
+```
 
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
+## For running demo in your PC locally: (make sure you have git in your system)
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+1. clone this repository </br> ``` git clone https://github.com/Naramkeshav59/SpeechToTextApp/```
+2. navigate to SpeechToText folder in the terminal.
+3. create a python virtual environment and activate it. refer <a href ='https://docs.python.org/3/library/venv.html'>virtual environment using venv </a>
+4. Install dependencies: </br> ```pip install -r requirements.txt ``` 
+5. Run the flask server </br> ```python main.py```
+6. The above will take some time for the first time while running reason being it should download the models. Later it won't take much time.
+7. Open <a href = 'http://127.0.0.1:8000/'> </a> for testing the app.
+8. Cheers that's all we have to do 🥂🥂...
 
-* Redistributions in binary form must reproduce the above copyright notice, this
-  list of conditions and the following disclaimer in the documentation and/or
-  other materials provided with the distribution.
 
-* Neither the name of the {organization} nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
