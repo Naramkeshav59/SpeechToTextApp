@@ -14,7 +14,7 @@ This is a client-server architectural Speech to Text web application made using 
 │   └── js (folder containing javascript files)
 │       ├── chunk.js (for creating chunks using vad.js and send them to the server using AJAX)
 │       ├── recorder.js (for recording the audio using browser's webrtc)
-│       └── vad.js      (vad is performed in real-time and we can make decisions based on vad using this)
+│       └── vad.js      (Voice Activity Dectection is performed in real-time and we can make decisions based on vad using this)
 ├── templates
 │   └── main.html       (to put together all JavaScript logic and interfacing them to the buttons etc.,).
 └── uploads
