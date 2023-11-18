@@ -1,4 +1,4 @@
-This is a client-server architectural Web App made using flask micro framework webservice which is a Speech to Text web application.
+This is a client-server architectural Speech to Text web application made using flask micro framework.
 ## Folder structure and details:
 ```
 .
