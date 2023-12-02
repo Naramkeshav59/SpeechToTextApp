@@ -2,7 +2,7 @@ This is a client-server architectural Speech to Text web application made using 
 ## Folder structure and details:
 ```
 .
-├── __pycache__ (all the python cache will be here. Not important)
+├── __pycache__ (all the python cache will be here like downloaded models. Not important)
 │   └── model.cpython-39.pyc
 ├── main.py (flask server to receive the audio chunk(request) and return the transcript(response)) 
 ├── model.py (Models can be trained finetuned here. Includes a function for inferencing which is imported ro main.py) 

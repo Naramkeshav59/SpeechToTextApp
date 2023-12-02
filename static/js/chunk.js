@@ -70,7 +70,6 @@ function startRecording() {
 			the sampleRate defaults to the one set in your OS for your playback device
 		*/
 		audioContext = new AudioContext({
-			
 			sampleRate: 16000,
 		  });
 		
